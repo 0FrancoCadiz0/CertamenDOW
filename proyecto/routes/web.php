@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\ProfesorController;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomeController::class,'login'])->name('home.index');
+
+Route::get('/Alumno',[AlumnoController::class,'homeAlum'])->name('alumnos.alumnos');
+
+Route::get('/Profe',[ProfesorController::class,'homeProfe'])->name('profesor.profe');
+
+Route::get('/Admin',[AdminController::class,'homeAdmin'])->name('administrador.admin');
