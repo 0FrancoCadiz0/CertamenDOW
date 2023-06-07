@@ -14,7 +14,7 @@
         
     }
     </style>
-   
+
 <body   style='background-image: url("images/fondo.jpg"); background-repeat:no-repeat; background-size:cover'> 
   <div class="container">
   <div class="row">
@@ -43,7 +43,7 @@
                 </div>
               </div>
               <div class="input-box">
-                    <a href="{{route('profesor.profe')}}"></a><button type="submit" button class=" btn btn-dark text-black ">Iniciar sesión</button></a>
+                <a href="{{route('profesor.profe')}}" button class=" btn btn-dark text-black "> iniciar sesión </button></a>
               </div>
             </form>
           </div>
