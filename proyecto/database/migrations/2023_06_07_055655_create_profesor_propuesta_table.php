@@ -18,9 +18,9 @@ return new class extends Migration
             $table->time("hora");
             $table->text("comentario");
             $table->timestamps();
-            $table->primary(['propuesta_id', 'profesor_rut']);
             $table->foreign('propuesta_id')->references('id')->on('propuestas');
             $table->foreign('profesor_rut')->references('rut')->on('profesores');
+            $table->primary(['propuesta_id', 'profesor_rut']);
         });
     }
 
