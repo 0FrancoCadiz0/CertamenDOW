@@ -47,7 +47,7 @@
         <h4>Alumnos</h4>
       </div>  
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
       <h3>Entregas y Estados</h3>
       <hr>
       <div class="col-12 col-lg-3">
@@ -64,7 +64,6 @@
               <td><h5>Estado</h5></td>
               <td><h6>aprobado/rechazado/modificar</h6></td>
             </tr>
-            
           </table>
       </div>
     </div>
