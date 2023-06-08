@@ -58,7 +58,11 @@
             </tr>
             <tr>
               <td><h5>Adjuntar Trabajo</h5></td>
-              <td><h6>Aquí subir el PDF</h6></td>
+              <td><form action="upload.php" method="POST" enctype="multipart/form-data">
+                      <input type="file" name="archivo" accept=".pdf">
+                       <input type="submit" value="Subir archivo">
+                  </form>
+              </td>
             </tr>
             <tr>
               <td><h5>Estado</h5></td>
@@ -66,7 +70,9 @@
             </tr>
           </table>
       </div>
+      
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

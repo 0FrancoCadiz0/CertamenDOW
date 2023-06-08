@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-06-2023 a las 02:38:50
+-- Tiempo de generación: 08-06-2023 a las 05:23:53
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -103,6 +103,14 @@ CREATE TABLE `profesores` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `profesores`
+--
+
+INSERT INTO `profesores` (`rut`, `nombre`, `apellido`, `email`, `created_at`, `updated_at`) VALUES
+('1000-1', 'Umberto', 'Suazo', 'zu@gmail.com', NULL, NULL),
+('18980808-8', 'Dago', 'Farias', 'far@gmail.com', NULL, NULL);
 
 -- --------------------------------------------------------
 
