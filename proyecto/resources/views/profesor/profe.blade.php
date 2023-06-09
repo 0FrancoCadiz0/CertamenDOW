@@ -28,7 +28,7 @@
         width: 100%;
         max-width: 500px;
         margin: 0 auto;
-        background-color: ;
+        background-color: white ;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
 
@@ -45,7 +45,7 @@
     </style>
 </head>
 <body style ="background-color: #d1f5d1;">
-     <div class="container py-3 px-3">
+    <div class="container py-3 px-3">
       <div class="align py-5 px-3">
         <h1>Taller de Sistemas</h1>
         <hr> 
@@ -55,24 +55,18 @@
           <table>
       <tr>
         <td>rut</td>
-        <td>nombre</td>
-        <td>apellido</td>
-        <td>email</td>
+        <td>fecha</td>
         <td>Documento adjunto</td>
       </tr>
       <?php
-        $sql="SELECT * FROM alumnos";
+        $sql="SELECT * FROM propuestas";
         $result=mysqli_query($conexion,$sql);
         while ($mostrar=mysqli_fetch_array($result)){
       ?>
       <tr>
-        <td><?php echo $mostrar["rut"]; ?></td>
-        <td><?php echo $mostrar["nombre"]; ?></td>
-        <td><?php echo $mostrar["apellido"]; ?></td>
-        <td><?php echo $mostrar["email"]; ?></td>
-        <td>
-         
-        </td>
+        <td><?php echo $mostrar["estudiante_rut"]; ?></td>
+        <td><?php echo $mostrar["fecha"]; ?></td>
+        <td><?php echo $mostrar["documento"]; ?></td>
       </tr>
       <?php
         }

@@ -67,29 +67,38 @@
     <div class="row justify-content-center">
       <h3>Entregas y Estados</h3>
       <hr>
-      <div class="col-12 col-lg-3">
+      <div class="col-12 col-lg-4">
+        <div class="card">
+          <div class="card-header bg-dark text-white form-control">
+            <h4> inicio de sesión </h4>
+          </div>
+          <div class="card-body form-control">
+            <form method="POST" action="{{route('alumnos.store')}}" enctype="multipart/form-data">
+              @csrf
+              <div class="mb-3">
+                <label for="rut" class="form-label">Rut</label>
+                <input type="text" id="rut" name="rut" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="pdf">Archivo PDF:</label>
+                <input type="file" name="pdf" class="form-control-file" accept="application/pdf">
+              </div>
+              <br>
+              <div class="mb-3 d-grid gap-2 d-lg-block">
+                <button type ="submit" class="btn btn-success">Subir Propuesta</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <br>
           <table class="custom-table">
             <tr>
               <td><h5>Estado de la entrega</h5></td>
               <td><h6>Sin enviar</h6></td>
             </tr>
-            <tr>
-              <td><h5>Adjuntar Trabajo</h5></td>
-              <td>
-                <form action="upload.php" method="POST" enctype="multipart/form-data">
-                  <input type="file" name="archivo" accept=".pdf">
-                  <input type="submit" value="Subir archivo">
-                </form>
-              </td>
-            </tr>
-            <tr>
-              <td><h5>Estado</h5></td>
-              <td><h6>Aprobado/Rechazado/Modificar</h6></td>
-            </tr>
           </table>
       </div>
     </div>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

@@ -23,3 +23,6 @@ Route::get('/Alumno',[AlumnoController::class,'homeAlum'])->name('alumnos.alumno
 Route::get('/Profe',[ProfesorController::class,'homeProfe'])->name('profesor.profe');
 
 Route::get('/Admin',[AdminController::class,'homeAdmin'])->name('administrador.admin');
+
+Route::post('/Alumno',[AlumnoController::class,'store'])->name('alumnos.store');
+
