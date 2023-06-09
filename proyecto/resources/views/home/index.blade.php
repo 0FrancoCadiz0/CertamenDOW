@@ -16,13 +16,14 @@
     </style>
 
 <body   style='background-image: url("images/fondo.jpg"); background-repeat:no-repeat; background-size:cover'> 
-  <div class="container">
-  <div class="row">
-    <div class="col-12 text-right">
-      <img src="images/logo.jpg" alt="logo" class="position-absolute top-0 end-0 logo">
-      <h1 class="textTitulo" style="font-family: 'NombreDeLaFuenteGrafiti', cursive;">Bienvenido a Taller de Sistemas</h1>
+   <div class="container py-3 px-3">
+      <div class="align py-5 px-3">
+        <img src="images/logo.jpg" alt="logo" class="position-absolute top-0 end-0 logo">
+        <h1>Taller de Sistemas</h1>
+        <hr> 
+        <h4>Inicio</h4>
+      </div>  
     </div>
-  </div>
 
   <!-- fin primer container -->
   <!-- inicio profesores  -->
