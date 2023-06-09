@@ -57,6 +57,8 @@
         <td>rut</td>
         <td>fecha</td>
         <td>Documento adjunto</td>
+        <td>Acerca de la propuesta</td>
+        <td></td> 
       </tr>
       <?php
         $sql="SELECT * FROM propuestas";
@@ -67,11 +69,31 @@
         <td><?php echo $mostrar["estudiante_rut"]; ?></td>
         <td><?php echo $mostrar["fecha"]; ?></td>
         <td><?php echo $mostrar["documento"]; ?></td>
+        <td>
+          <form method="POST" action="{{route('profesor.store')}}">
+            @csrf
+            <div class="mb-3">
+              <label for="rut" class="form-label">Rut Docente</label>
+              <input type="text" id="rut" name="rut" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="rut" class="form-label">Retroalimentacion</label> 
+              <input type="text" as="textarea" rows="4" cols="50" name="Retroalimentacion">
+            </div>
+            <input type="text" id="id" name="id" style="display: none;" value="<?php echo $mostrar["id"]; ?>">
+            <br>
+            <div class="mb-3 d-grid gap-2 d-lg-block">
+              <button type ="submit" class="btn btn-success">Subir Propuesta</button>
+            </div>
+          </form>
+        </td>
       </tr>
       <?php
         }
       ?>
+    </div>
     </table>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

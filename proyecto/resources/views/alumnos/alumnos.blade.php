@@ -1,3 +1,6 @@
+<?php
+  $conexion=mysqli_connect("localhost","root","","bd");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,10 +95,23 @@
         </div>
         <br>
           <table class="custom-table">
+            <?php
+              $sql="SELECT * FROM profesor_propuesta";
+              $result=mysqli_query($conexion,$sql);
+              while ($mostrar=mysqli_fetch_array($result)){
+            ?>
+            <br>
             <tr>
               <td><h5>Estado de la entrega</h5></td>
-              <td><h6>Sin enviar</h6></td>
+              <td><h6>Enviado</h6></td>
             </tr>
+            <tr>
+              <td><h5><u>Retroalimentacion</u></h5></td>
+              <td><?php echo $mostrar["comentario"]; ?></td>
+            </tr>
+            <?php
+              } 
+            ?>
           </table>
       </div>
     </div>

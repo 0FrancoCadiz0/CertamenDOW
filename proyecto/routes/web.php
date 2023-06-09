@@ -25,4 +25,4 @@ Route::get('/Profe',[ProfesorController::class,'homeProfe'])->name('profesor.pro
 Route::get('/Admin',[AdminController::class,'homeAdmin'])->name('administrador.admin');
 
 Route::post('/Alumno',[AlumnoController::class,'store'])->name('alumnos.store');
-
+Route::post('/Profe',[ProfesorController::class,'store'])->name('profesor.store');

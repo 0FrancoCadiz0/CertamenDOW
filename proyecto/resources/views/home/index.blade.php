@@ -16,7 +16,7 @@
     </style>
 
 <body   style='background-image: url("images/fondo.jpg"); background-repeat:no-repeat; background-size:cover'> 
-   <div class="container py-3 px-3">
+  <div class="container py-3 px-3">
       <div class="align py-5 px-3">
         <img src="images/logo.jpg" alt="logo" class="position-absolute top-0 end-0 logo">
         <h1>Taller de Sistemas</h1>
